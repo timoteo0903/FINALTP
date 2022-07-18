@@ -1,0 +1,4 @@
+#!/bin/bash
+CANTIDADPALABRAS=$(echo $(wc -w ejemplo.txt)) 
+PALABRAS=${CANTIDADPALABRAS::3}
+echo "La cantidad de palabras en el texto es $PALABRAS"
