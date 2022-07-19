@@ -1,0 +1,3 @@
+#!/bin/bash
+LINEASVACIAS=$(grep -iwn "[A-Z]" ejemplo.txt | wc -l)
+echo "La cantidad de lineas vacias en este archivo txt es $LINEASVACIAS"
