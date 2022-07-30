@@ -1,0 +1,21 @@
+#!/bin/bash
+MASLARGA=$(echo $(wc -L ejemplo.txt))
+
+
+CANTMASLARGA=${MASLARGA::3}
+LINEAS=$(echo $(wc -l ejemplo.txt))
+CANTLINEAS=${LINEAS::3}
+
+echo "La cantidad de caracteres de la linea mas larga es $CANTMASLARGA"
+echo "La cantidad de lineas del archivo es $CANTLINEAS"
+
+
+
+
+
+CANT=0
+while read p;
+do
+	LONG=$(echo $(wc -l $p))
+	CANT=$(CANT+${LONG::3})
+done <'ejemplo.txt'
