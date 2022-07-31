@@ -1,0 +1,12 @@
+#!/bin/bash
+TEXTO=$(cat ejemplo.txt)
+for palabra in $TEXTO
+do
+	if [ ${#palabra} -gt 4 ];
+	then
+		PALABRA=$(echo $palabra | tr -d ["."","" "";"])
+		echo " La palabra es '$PALABRA' y aparece $(grep -o -i $palabra ejemplo.txt | wc -l) de veces"
+	fi
+done
+
+
