@@ -1,12 +1,11 @@
 #!/bin/bash
-
 LINEASVACIAS=0
 while read line 
 do
 	CAR=$(echo -n $line |wc -m)
 	if [[ $CAR -eq 1 ]]
 	then
-		LINEASVACIAS=$(( $LINEASVACIAS + 1))
+		LINEASVACIAS=$(( $LINEASVACIAS + 1 ))
 	fi
 done< ejemplo.txt
-echo "la cantidad de lineas vacias en el archivo es $LINEASVACIAS
+echo "la cantida de lineas vacias en el archivo es $LINEASVACIAS"

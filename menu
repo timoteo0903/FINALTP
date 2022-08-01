@@ -1,0 +1,62 @@
+#!/bin/bash
+
+opc=0
+
+while [ $opc -ne 6 ]; do
+
+clear
+
+echo "1- Indicador estadístico de longitud de palabras "
+echo "2- Indicador estadístico de uso de palabras "
+echo "3- Identificación de nombres propios"
+echo "4- Indicador estadístico de longitud de oraciones"
+echo "5- Contador de lineas en blanco"
+echo "6- Salir"
+echo
+read -p "Seleccione una opcion: " opc
+
+case $opc in
+
+    1) clear 
+        echo Se ejecutara el Indicador estadístico de longitud de palabras
+        echo
+        echo
+        ./ej1
+        sleep 15 
+        ;;
+    2) clear 
+        echo Se ejecutara el Indicador estadístico de uso de palabras
+        echo
+        echo
+        ./ej2
+        sleep 15 
+        ;;
+    3) clear 
+        echo Se ejecutara la Identificación de nombres propios
+        echo
+        echo
+        ./ej3
+        sleep 15 
+        ;;
+    4) clear 
+        echo Se ejecutara el Indicador estadístico de longitud de oraciones
+        echo
+        echo
+        ./ej4
+        sleep 15
+        ;;
+    5) clear 
+        echo Se ejecutarar el Contador de lineas en blanco
+        echo
+        echo
+        ./ej5
+        sleep 15
+        ;;
+    6) clear 
+        ;;
+    *) echo $opc no es una opcion valida
+        ;;  
+
+esac
+
+done
