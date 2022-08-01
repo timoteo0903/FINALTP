@@ -1,21 +1,23 @@
 #!/bin/bash
-MASLARGA=$(echo $(wc -L ejemplo.txt))
-
-
-CANTMASLARGA=${MASLARGA::3}
 LINEAS=$(echo $(wc -l ejemplo.txt))
-CANTLINEAS=${LINEAS::3}
+CANTLINEAS=0
+MASLARGA=$(echo $(wc -L ejemplo.txt))
+echo "La oracion mas larga mide $MASLARGA"
+echo "La cantidad de lineas es $LINEAS"
 
-echo "La cantidad de caracteres de la linea mas larga es $CANTMASLARGA"
-echo "La cantidad de lineas del archivo es $CANTLINEAS"
-
-
-
-
-
-CANT=0
-while read p;
+while read line
 do
-	LONG=$(echo $(wc -l $p))
-	CANT=$(CANT+${LONG::3})
-done <'ejemplo.txt'
+	CAR=$(echo -n $line | wc -m)
+	if [[ $CAR -eq 1 ]]
+	then
+		CANTLINEAS=$(( $CANTLINEAS + 1 ))
+	elif [[ $CAR -ne 1 ]] 
+	then 
+		echo "$CAR"
+		(($MIN > $CAR)) && MIN=$CAR
+		(($MAX < $CAR)) && MAX=$CAR
+	fi
+
+done <ejemplo.txt
+echo "La cantidad de lineas vacias es $CANTLINEAS "
+echo "La oracion mas corta mide $MIN"
