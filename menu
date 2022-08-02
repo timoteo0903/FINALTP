@@ -54,7 +54,8 @@ case $opc in
         ;;
     6) clear 
         ;;
-    *) echo $opc no es una opcion valida
+    *)echo $opc no es una opcion valida. Ingrese una nueva 
+	    sleep 4
         ;;  
 
 esac
