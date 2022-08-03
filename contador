@@ -1,0 +1,20 @@
+#!/bin/bash
+
+PUNTOS=$(grep -o "['.''?'''!]" ejemplo.txt | wc -c)
+echo "La cantidad de puntos es $PUNTOS"
+MAYOR=$(cat ejemplo.txt | cut -d . -f1)
+MENOR=$(cat ejemplo.txt | cut -d . -f1)
+for x in $(seq 1 $PUNTOS)
+do
+	ORACION=$(cat ejemplo.txt | cut -d . -f$x)
+	if [[ ${#ORACION} -gt ${#MAYOR} ]]
+	then
+		MAYOR=$ORACION
+	elif [[ ${#ORACION} -lt ${#MENOR} && ${#ORACION} -gt 3 ]] #Esto es para que no tenga en cuenta las lineas en blanco
+	then
+		MENOR=$ORACION
+	fi
+done
+
+echo "La oracion mas larga es '$MAYOR'"
+echo "La oracion mas corta es '$MENOR'"

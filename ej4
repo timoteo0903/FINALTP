@@ -1,17 +1,3 @@
 #!/bin/bash
-LINEAS=$(echo $(wc -l ejemplo.txt))
-MASLARGA=$(echo $(wc -L ejemplo.txt) )
-MIN=$(echo ${MASLARGA::3})
-while read line
-do
-	CAR=$(echo -n $line | wc -m)
-	if [[ $CAR -ne 1 ]] 
-	then 
-		(($MIN > $CAR)) && MIN=$CAR
-	fi
 
-done <ejemplo.txt
-echo "La oracion mas larga mide ${MASLARGA::3}"
-echo "La oracion mas corta mide $MIN"
-echo "La cantidad de lineas es ${LINEAS::3}"
-
+echo " $(cut -d . ejemplo.txt) "
