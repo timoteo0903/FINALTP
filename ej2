@@ -5,7 +5,7 @@ do
 	if [ ${#palabra} -gt 4 ];
 	then
 		PALABRA=$(echo $palabra | tr -d ["."","" "";"])
-		echo "$(grep -o -i $palabra ejemplo.txt | wc -l) veces, aparece '$PALABRA'" >> palabras.txt
+		echo "$(grep -o -i $palabra ejemplo.txt | wc -l) veces aparece '$PALABRA'" >> palabras.txt
 		
 	fi
 done
