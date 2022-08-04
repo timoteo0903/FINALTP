@@ -8,4 +8,4 @@ do
 		LINEASVACIAS=$(( $LINEASVACIAS + 1 ))
 	fi
 done< ejemplo.txt
-echo "la cantida de lineas vacias en el archivo es $LINEASVACIAS"
+echo "La cantida de lineas vacias en el archivo es $LINEASVACIAS"

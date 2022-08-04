@@ -19,4 +19,4 @@ done
 PROMEDIO=$(($SUMA/$CANTIDAD))
 echo "La palabra mas larga de este texto es $MAYOR y la longitud es ${#MAYOR} "
 echo "La palabra mas corta de este texto es $MENOR y la longitud es ${#MENOR} "
-echo "El promedio de caracteres de las palbras de este texto es $PROMEDIO"
+echo "El promedio de caracteres de las palabras de este texto es $PROMEDIO"

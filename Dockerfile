@@ -1,5 +1,5 @@
 FROM ubuntu
 MAINTAINER Timoteo Garcia
-COPY ./ /TpFinalEntornos   #desde donde saco los archivos y a donde
-WORKDIR TpFinalEntornos   #work dir coincide con lo de arriba
-ENTRYPOINT ["/TpFinalEntornos/menu"]
+COPY ./ /c/Users/garci/TpFinalEntornos
+WORKDIR /c/Users/garci/TpFinalEntornos  
+ENTRYPOINT ["/c/Users/garci/TpFinalEntornos/menu"]
