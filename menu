@@ -21,36 +21,36 @@ case $opc in
         echo Se ejecutara el Indicador estadístico de longitud de palabras
         echo
         echo
-        ./ej1
-        sleep 15 
+        ./statsWords.sh
+        sleep 7 
         ;;
     2) clear 
         echo Se ejecutara el Indicador estadístico de uso de palabras
         echo
         echo
-        ./ej2
-        sleep 15 
+        ./statsUsageWords.sh
+        sleep 7
         ;;
     3) clear 
         echo Se ejecutara la Identificación de nombres propios
         echo
         echo
-        ./ej3
-        sleep 15 
+        ./findNames.sh
+        sleep 7 
         ;;
     4) clear 
         echo Se ejecutara el Indicador estadístico de longitud de oraciones
         echo
         echo
-        ./ej4
+        ./statsSentences.sh
         sleep 15
         ;;
     5) clear 
         echo Se ejecutarar el Contador de lineas en blanco
         echo
         echo
-        ./ej5
-        sleep 15
+        ./blankLinesCounter.sh
+        sleep 7
         ;;
     6) clear 
         ;;
