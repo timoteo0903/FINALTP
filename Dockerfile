@@ -1,6 +1,6 @@
 FROM ubuntu
 MAINTAINER Timoteo Garcia
-COPY ./TpFinalEntornos
+COPY . /TpFinalEntornos
 WORKDIR /TpFinalEntornos  
 RUN chmod +x *.sh
 ENTRYPOINT ["./menu"]
